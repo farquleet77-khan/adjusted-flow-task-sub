@@ -1,0 +1,7 @@
+,no battery,A_deterministic,B_conservative
+mean cost EUR,9756.74,9463.07,9466.25
+P90 cost EUR,9784.54,9489.37,9493.97
+mean saving vs no battery EUR,0.0,293.67,290.49
+scenarios that would export %,0.0,57.67,29.67
+mean energy that would be exported kWh,0.0,20.27,1.27
+scenarios above 600 kW %,0.0,0.0,0.0

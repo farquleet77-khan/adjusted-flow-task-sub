@@ -1,0 +1,5 @@
+,MAE kW,P90 |error| kW
+"gap rows, real temperature",19.6,40.91
+"gap rows, imputed temperature",19.6,40.91
+"all rows, real temperature",13.55,34.67
+"all rows, noisy temperature (sigma 1.56 C)",13.55,34.67

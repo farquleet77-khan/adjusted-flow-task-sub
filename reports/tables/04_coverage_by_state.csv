@@ -1,0 +1,6 @@
+plant_state,rows,coverage P10-P90 %,below P10 %,above P90 %,width P10-P90 kW,coverage P5-P95 %,coverage with ONE global width %
+SHUTDOWN,1341.0,82.0,7.7,10.3,5.7,91.2,99.9
+MAINTENANCE,399.0,80.7,9.5,9.8,16.8,88.5,100.0
+RAMP_UP,1246.0,53.7,23.1,23.2,52.2,60.1,60.5
+NORMAL,12677.0,79.8,10.2,10.0,30.6,89.8,93.2
+HIGH_DEMAND,15941.0,79.6,10.3,10.1,52.1,89.3,68.7

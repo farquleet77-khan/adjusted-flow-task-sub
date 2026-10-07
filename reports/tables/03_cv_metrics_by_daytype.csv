@@ -1,0 +1,4 @@
+day_type,n,MAE,RMSE,WAPE_%,Bias,MAE_baseline,MAE improvement %
+holiday,670,11.86,16.79,6.23,2.74,13.23,10.4
+weekend,9190,12.36,21.57,9.15,0.03,13.0,4.9
+workday,21744,14.89,19.83,4.68,0.03,16.89,11.8

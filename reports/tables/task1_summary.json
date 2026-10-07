@@ -1,0 +1,274 @@
+{
+  "feature_set": "core",
+  "features": [
+    "qh",
+    "dow",
+    "is_weekend",
+    "is_holiday",
+    "state_SHUTDOWN",
+    "state_MAINTENANCE",
+    "state_RAMP_UP",
+    "state_NORMAL",
+    "state_HIGH_DEMAND"
+  ],
+  "best_model": "xgboost",
+  "holiday_weight": 0.216,
+  "training_rows": 31604,
+  "ablation": [
+    {
+      "feature set": "core",
+      "n features": 9,
+      "MAE NORMAL Nov": 9.59,
+      "Bias NORMAL Nov": 0.33,
+      "MAE NORMAL Jan": 9.79,
+      "Bias NORMAL Jan": 0.36,
+      "CV MAE NORMAL": 9.57,
+      "holdout MAE NORMAL (mean)": 9.69
+    },
+    {
+      "feature set": "core + cyclic",
+      "n features": 14,
+      "MAE NORMAL Nov": 9.6,
+      "Bias NORMAL Nov": 0.28,
+      "MAE NORMAL Jan": 9.79,
+      "Bias NORMAL Jan": 0.36,
+      "CV MAE NORMAL": 9.58,
+      "holdout MAE NORMAL (mean)": 9.7
+    },
+    {
+      "feature set": "core + temperature",
+      "n features": 10,
+      "MAE NORMAL Nov": 9.61,
+      "Bias NORMAL Nov": 0.73,
+      "MAE NORMAL Jan": 9.9,
+      "Bias NORMAL Jan": 0.05,
+      "CV MAE NORMAL": 9.64,
+      "holdout MAE NORMAL (mean)": 9.75
+    },
+    {
+      "feature set": "core + season",
+      "n features": 11,
+      "MAE NORMAL Nov": 26.49,
+      "Bias NORMAL Nov": 6.84,
+      "MAE NORMAL Jan": 9.88,
+      "Bias NORMAL Jan": 0.45,
+      "CV MAE NORMAL": 9.9,
+      "holdout MAE NORMAL (mean)": 18.18
+    }
+  ],
+  "comparison": [
+    {
+      "model": "xgboost",
+      "MAE NORMAL Nov": 9.59,
+      "MAE NORMAL Jan": 9.79,
+      "CV MAE all": 14.09,
+      "CV MAE NORMAL": 9.57,
+      "CV MAE SHUTDOWN": 1.69,
+      "seconds": 24.98,
+      "December score": 9.17
+    },
+    {
+      "model": "lightgbm",
+      "MAE NORMAL Nov": 9.6,
+      "MAE NORMAL Jan": 9.77,
+      "CV MAE all": 14.14,
+      "CV MAE NORMAL": 9.57,
+      "CV MAE SHUTDOWN": 2.05,
+      "seconds": 19.28,
+      "December score": 9.19
+    },
+    {
+      "model": "random_forest",
+      "MAE NORMAL Nov": 9.92,
+      "MAE NORMAL Jan": 10.05,
+      "CV MAE all": 14.32,
+      "CV MAE NORMAL": 9.86,
+      "CV MAE SHUTDOWN": 1.61,
+      "seconds": 36.15,
+      "December score": 9.44
+    },
+    {
+      "model": "xgboost_shallow",
+      "MAE NORMAL Nov": 9.96,
+      "MAE NORMAL Jan": 10.03,
+      "CV MAE all": 17.12,
+      "CV MAE NORMAL": 9.98,
+      "CV MAE SHUTDOWN": 17.72,
+      "seconds": 86.02,
+      "December score": 10.5
+    },
+    {
+      "model": "profile",
+      "MAE NORMAL Nov": 11.68,
+      "MAE NORMAL Jan": 11.78,
+      "CV MAE all": 15.68,
+      "CV MAE NORMAL": 11.72,
+      "CV MAE SHUTDOWN": 2.0,
+      "seconds": 2.99,
+      "December score": 11.1
+    },
+    {
+      "model": "ridge",
+      "MAE NORMAL Nov": 39.03,
+      "MAE NORMAL Jan": 36.69,
+      "CV MAE all": 51.5,
+      "CV MAE NORMAL": 36.98,
+      "CV MAE SHUTDOWN": 38.7,
+      "seconds": 2.35,
+      "December score": 37.91
+    }
+  ],
+  "cv_by_state": [
+    {
+      "plant_state": "SHUTDOWN",
+      "n": 1341,
+      "MAE": 1.69,
+      "RMSE": 2.52,
+      "WAPE_%": 3.49,
+      "Bias": 0.37,
+      "MAE_baseline": 2.0,
+      "MAE improvement %": 15.5
+    },
+    {
+      "plant_state": "MAINTENANCE",
+      "n": 399,
+      "MAE": 5.21,
+      "RMSE": 6.53,
+      "WAPE_%": 6.56,
+      "Bias": 0.18,
+      "MAE_baseline": 5.71,
+      "MAE improvement %": 8.8
+    },
+    {
+      "plant_state": "RAMP_UP",
+      "n": 1246,
+      "MAE": 35.35,
+      "RMSE": 51.21,
+      "WAPE_%": 32.49,
+      "Bias": 1.07,
+      "MAE_baseline": 38.86,
+      "MAE improvement %": 9.0
+    },
+    {
+      "plant_state": "NORMAL",
+      "n": 12677,
+      "MAE": 9.57,
+      "RMSE": 12.07,
+      "WAPE_%": 3.6,
+      "Bias": 0.1,
+      "MAE_baseline": 11.72,
+      "MAE improvement %": 18.3
+    },
+    {
+      "plant_state": "HIGH_DEMAND",
+      "n": 15941,
+      "MAE": 17.29,
+      "RMSE": 22.23,
+      "WAPE_%": 5.88,
+      "Bias": -0.02,
+      "MAE_baseline": 18.42,
+      "MAE improvement %": 6.1
+    }
+  ],
+  "forward": [
+    {
+      "month": 2,
+      "n": 2650.0,
+      "MAE": 9.57,
+      "RMSE": 11.98,
+      "WAPE_%": 3.63,
+      "Bias": -0.03,
+      "new states": "-"
+    },
+    {
+      "month": 3,
+      "n": 2959.0,
+      "MAE": 9.54,
+      "RMSE": 11.98,
+      "WAPE_%": 3.7,
+      "Bias": -0.13,
+      "new states": "-"
+    },
+    {
+      "month": 4,
+      "n": 2872.0,
+      "MAE": 29.37,
+      "RMSE": 37.89,
+      "WAPE_%": 10.39,
+      "Bias": -23.5,
+      "new states": "HIGH_DEMAND"
+    },
+    {
+      "month": 5,
+      "n": 2916.0,
+      "MAE": 10.19,
+      "RMSE": 12.93,
+      "WAPE_%": 3.67,
+      "Bias": -0.58,
+      "new states": "-"
+    },
+    {
+      "month": 6,
+      "n": 2868.0,
+      "MAE": 10.22,
+      "RMSE": 12.93,
+      "WAPE_%": 3.64,
+      "Bias": -0.49,
+      "new states": "-"
+    },
+    {
+      "month": 7,
+      "n": 2968.0,
+      "MAE": 111.44,
+      "RMSE": 169.63,
+      "WAPE_%": 64.8,
+      "Bias": 106.06,
+      "new states": "SHUTDOWN"
+    },
+    {
+      "month": 8,
+      "n": 2763.0,
+      "MAE": 74.63,
+      "RMSE": 102.84,
+      "WAPE_%": 35.59,
+      "Bias": 44.83,
+      "new states": "RAMP_UP"
+    },
+    {
+      "month": 9,
+      "n": 2821.0,
+      "MAE": 26.8,
+      "RMSE": 34.43,
+      "WAPE_%": 8.5,
+      "Bias": -21.64,
+      "new states": "-"
+    },
+    {
+      "month": 10,
+      "n": 2947.0,
+      "MAE": 21.78,
+      "RMSE": 28.0,
+      "WAPE_%": 6.93,
+      "Bias": -16.47,
+      "new states": "-"
+    },
+    {
+      "month": 11,
+      "n": 2874.0,
+      "MAE": 13.55,
+      "RMSE": 18.2,
+      "WAPE_%": 5.48,
+      "Bias": 5.58,
+      "new states": "MAINTENANCE"
+    }
+  ],
+  "transition_mae": {
+    "< 24 h": 8.97,
+    "24-72 h": 16.9,
+    "> 72 h": 14.18
+  },
+  "december_avg_by_state": {
+    "SHUTDOWN": 35.1,
+    "NORMAL": 265.2
+  }
+}

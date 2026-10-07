@@ -1,0 +1,4 @@
+Put the three input files here (do not open and re-save them in Excel):
+  historical_data.csv
+  forecast_input_december.csv
+  electricity_prices_december.csv

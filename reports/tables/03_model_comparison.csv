@@ -1,0 +1,7 @@
+model,MAE NORMAL Nov,MAE NORMAL Jan,CV MAE all,CV MAE NORMAL,CV MAE SHUTDOWN,seconds,December score
+xgboost,9.59,9.79,14.09,9.57,1.69,24.98,9.17
+lightgbm,9.6,9.77,14.14,9.57,2.05,19.28,9.19
+random_forest,9.92,10.05,14.32,9.86,1.61,36.15,9.44
+xgboost_shallow,9.96,10.03,17.12,9.98,17.72,86.02,10.5
+profile,11.68,11.78,15.68,11.72,2.0,2.99,11.1
+ridge,39.03,36.69,51.5,36.98,38.7,2.35,37.91

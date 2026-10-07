@@ -1,0 +1,10 @@
+,MAE increase when shuffled [kW]
+dow,47.2
+qh,33.25
+is_weekend,17.14
+state_NORMAL,9.47
+is_holiday,0.0
+state_SHUTDOWN,0.0
+state_MAINTENANCE,0.0
+state_RAMP_UP,0.0
+state_HIGH_DEMAND,0.0

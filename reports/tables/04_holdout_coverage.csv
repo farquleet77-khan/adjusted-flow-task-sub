@@ -1,0 +1,5 @@
+holdout,subset,rows,coverage P10-P90 %,below P10 %,above P90 %,width P10-P90 kW,coverage P5-P95 %
+nov,all rows,2874.0,67.7,23.1,9.2,32.4,79.2
+nov,NORMAL rows,2475.0,78.4,10.9,10.7,30.3,89.5
+jan,all rows,2966.0,79.6,11.0,9.4,30.6,88.8
+jan,NORMAL rows,2966.0,79.6,11.0,9.4,30.6,88.8

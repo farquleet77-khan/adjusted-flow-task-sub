@@ -1,0 +1,167 @@
+{
+  "coverage_overall": {
+    "rows": 31604.0,
+    "coverage P10-P90 %": 78.8,
+    "below P10 %": 10.7,
+    "above P90 %": 10.6,
+    "width P10-P90 kW": 41.1,
+    "coverage P5-P95 %": 88.4
+  },
+  "reliability": {
+    "50": 49.4,
+    "60": 59.3,
+    "70": 69.1,
+    "80": 78.8,
+    "90": 88.4
+  },
+  "coverage_by_state": [
+    {
+      "plant_state": "SHUTDOWN",
+      "rows": 1341.0,
+      "coverage P10-P90 %": 82.0,
+      "below P10 %": 7.7,
+      "above P90 %": 10.3,
+      "width P10-P90 kW": 5.7,
+      "coverage P5-P95 %": 91.2,
+      "coverage with ONE global width %": 99.9
+    },
+    {
+      "plant_state": "MAINTENANCE",
+      "rows": 399.0,
+      "coverage P10-P90 %": 80.7,
+      "below P10 %": 9.5,
+      "above P90 %": 9.8,
+      "width P10-P90 kW": 16.8,
+      "coverage P5-P95 %": 88.5,
+      "coverage with ONE global width %": 100.0
+    },
+    {
+      "plant_state": "RAMP_UP",
+      "rows": 1246.0,
+      "coverage P10-P90 %": 53.7,
+      "below P10 %": 23.1,
+      "above P90 %": 23.2,
+      "width P10-P90 kW": 52.2,
+      "coverage P5-P95 %": 60.1,
+      "coverage with ONE global width %": 60.5
+    },
+    {
+      "plant_state": "NORMAL",
+      "rows": 12677.0,
+      "coverage P10-P90 %": 79.8,
+      "below P10 %": 10.2,
+      "above P90 %": 10.0,
+      "width P10-P90 kW": 30.6,
+      "coverage P5-P95 %": 89.8,
+      "coverage with ONE global width %": 93.2
+    },
+    {
+      "plant_state": "HIGH_DEMAND",
+      "rows": 15941.0,
+      "coverage P10-P90 %": 79.6,
+      "below P10 %": 10.3,
+      "above P90 %": 10.1,
+      "width P10-P90 kW": 52.1,
+      "coverage P5-P95 %": 89.3,
+      "coverage with ONE global width %": 68.7
+    }
+  ],
+  "holdout_coverage": [
+    {
+      "holdout": "nov",
+      "subset": "all rows",
+      "rows": 2874.0,
+      "coverage P10-P90 %": 67.7,
+      "below P10 %": 23.1,
+      "above P90 %": 9.2,
+      "width P10-P90 kW": 32.4,
+      "coverage P5-P95 %": 79.2
+    },
+    {
+      "holdout": "nov",
+      "subset": "NORMAL rows",
+      "rows": 2475.0,
+      "coverage P10-P90 %": 78.4,
+      "below P10 %": 10.9,
+      "above P90 %": 10.7,
+      "width P10-P90 kW": 30.3,
+      "coverage P5-P95 %": 89.5
+    },
+    {
+      "holdout": "jan",
+      "subset": "all rows",
+      "rows": 2966.0,
+      "coverage P10-P90 %": 79.6,
+      "below P10 %": 11.0,
+      "above P90 %": 9.4,
+      "width P10-P90 kW": 30.6,
+      "coverage P5-P95 %": 88.8
+    },
+    {
+      "holdout": "jan",
+      "subset": "NORMAL rows",
+      "rows": 2966.0,
+      "coverage P10-P90 %": 79.6,
+      "below P10 %": 11.0,
+      "above P90 %": 9.4,
+      "width P10-P90 kW": 30.6,
+      "coverage P5-P95 %": 88.8
+    }
+  ],
+  "width_by_state": {
+    "HIGH_DEMAND": 52.1,
+    "MAINTENANCE": 16.7,
+    "NORMAL": 30.6,
+    "RAMP_UP": 78.9,
+    "SHUTDOWN": 4.9
+  },
+  "imputed_widen_factor": 1.0,
+  "uses_temperature": false,
+  "december_by_state": [
+    {
+      "plant_state": "SHUTDOWN",
+      "Avg Load [kW]": 34.6,
+      "Uncertainty \u00b1 [kW] (P10-P90)": 16.1,
+      "Uncertainty \u00b1 [kW] (P5-P95)": 16.6,
+      "December intervals": 192.0,
+      "Note": "holidays never seen: envelope interval"
+    },
+    {
+      "plant_state": "MAINTENANCE",
+      "Avg Load [kW]": NaN,
+      "Uncertainty \u00b1 [kW] (P10-P90)": NaN,
+      "Uncertainty \u00b1 [kW] (P5-P95)": NaN,
+      "December intervals": NaN,
+      "Note": "not present in test period"
+    },
+    {
+      "plant_state": "RAMP_UP",
+      "Avg Load [kW]": NaN,
+      "Uncertainty \u00b1 [kW] (P10-P90)": NaN,
+      "Uncertainty \u00b1 [kW] (P5-P95)": NaN,
+      "December intervals": NaN,
+      "Note": "not present in test period"
+    },
+    {
+      "plant_state": "NORMAL",
+      "Avg Load [kW]": 265.2,
+      "Uncertainty \u00b1 [kW] (P10-P90)": 15.3,
+      "Uncertainty \u00b1 [kW] (P5-P95)": 19.7,
+      "December intervals": 2784.0,
+      "Note": ""
+    },
+    {
+      "plant_state": "HIGH_DEMAND",
+      "Avg Load [kW]": NaN,
+      "Uncertainty \u00b1 [kW] (P10-P90)": NaN,
+      "Uncertainty \u00b1 [kW] (P5-P95)": NaN,
+      "December intervals": NaN,
+      "Note": "not present in test period"
+    }
+  ],
+  "shutdown_day": {
+    "q10": 28.0,
+    "q50": 34.9,
+    "q90": 61.5
+  }
+}

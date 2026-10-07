@@ -1,0 +1,6 @@
+plant_state,Avg Load [kW],Uncertainty ± [kW] (P10-P90),Uncertainty ± [kW] (P5-P95),December intervals,Note
+SHUTDOWN,34.6,16.1,16.6,192.0,holidays never seen: envelope interval
+MAINTENANCE,,,,,not present in test period
+RAMP_UP,,,,,not present in test period
+NORMAL,265.2,15.3,19.7,2784.0,
+HIGH_DEMAND,,,,,not present in test period

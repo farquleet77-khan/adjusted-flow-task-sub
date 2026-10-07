@@ -1,0 +1,17 @@
+,A_deterministic,B_conservative
+solver,pyomo/appsi_highs,pyomo/appsi_highs
+solve_seconds,11.26,20.19
+electricity_cost_EUR,9108.82,9119.42
+degradation_cost_EUR,325.6,319.6
+total_cost_EUR,9434.43,9439.03
+cost_without_battery_EUR,9729.6,9729.6
+net_saving_EUR,295.18,290.58
+throughput_kWh,21707.0,21306.8
+charged_kWh,11128.2,10923.1
+discharged_kWh,10578.8,10383.8
+equivalent_full_cycles,30.2,29.7
+days_with_throughput,31,31
+days_hit_min_soc,31,27
+days_hit_max_soc,31,31
+simultaneous_charge_discharge_intervals,0,0
+min_end_of_day_soc_kWh,250.0,250.0

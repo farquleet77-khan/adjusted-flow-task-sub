@@ -1,0 +1,14 @@
+{
+  "capacity_kWh": 500,
+  "initial_soc_kWh": 250,
+  "minimum_soc_kWh": 100,
+  "maximum_soc_kWh": 450,
+  "maximum_charge_power_kW": 100,
+  "maximum_discharge_power_kW": 100,
+  "charge_efficiency": 0.975,
+  "discharge_efficiency": 0.975,
+  "grid_import_limit_kW": 600,
+  "interval_minutes": 15,
+  "degradation_cost_EUR_per_kWh": 0.015,
+  "daily_reserve_kWh": 250
+}

@@ -1,0 +1,10 @@
+finding,rows,decision
+"Files complete, continuous 15-min grid, no DST shifts",0,proceed; timestamps treated as naive
+"Non-GOOD rows: weather data missing, wrong (88 C) or unverifiable (offline but values present)",210,exclude from training and validation; never impute the load
+Temperature sentinel 88.0 C,6,treat temperatures outside -40..50 C as missing
+Humidity noise-dominated and absent from December,2593,never use humidity
+Floors 28 kW (SHUTDOWN weekends) and 55 kW (RAMP_UP),525,keep: genuine standby load
+Isolated one-interval spikes labelled GOOD,59,exclude from training and metrics
+Load inconsistent with plant_state on 1 and 15 Aug (RAMP_UP <-> HIGH_DEMAND),192,exclude those days from training; flag Dec transition days
+64 December rows without a weather forecast (8 still carry a value),64,treat all as missing and impute; irrelevant if the model does not use temperature
+SHUTDOWN on holidays (25-26 Dec) never seen in training,192,unseen-holiday rule in the model + envelope interval

@@ -1,0 +1,127 @@
+{
+  "backend": "pyomo",
+  "kpis": {
+    "A_deterministic": {
+      "solver": "pyomo/appsi_highs",
+      "solve_seconds": 11.26,
+      "electricity_cost_EUR": 9108.82,
+      "degradation_cost_EUR": 325.6,
+      "total_cost_EUR": 9434.43,
+      "cost_without_battery_EUR": 9729.6,
+      "net_saving_EUR": 295.18,
+      "throughput_kWh": 21707.0,
+      "charged_kWh": 11128.2,
+      "discharged_kWh": 10578.8,
+      "equivalent_full_cycles": 30.2,
+      "days_with_throughput": 31,
+      "days_hit_min_soc": 31,
+      "days_hit_max_soc": 31,
+      "simultaneous_charge_discharge_intervals": 0,
+      "min_end_of_day_soc_kWh": 250.0
+    },
+    "B_conservative": {
+      "solver": "pyomo/appsi_highs",
+      "solve_seconds": 20.19,
+      "electricity_cost_EUR": 9119.42,
+      "degradation_cost_EUR": 319.6,
+      "total_cost_EUR": 9439.03,
+      "cost_without_battery_EUR": 9729.6,
+      "net_saving_EUR": 290.58,
+      "throughput_kWh": 21306.8,
+      "charged_kWh": 10923.1,
+      "discharged_kWh": 10383.8,
+      "equivalent_full_cycles": 29.7,
+      "days_with_throughput": 31,
+      "days_hit_min_soc": 27,
+      "days_hit_max_soc": 31,
+      "simultaneous_charge_discharge_intervals": 0,
+      "min_end_of_day_soc_kWh": 250.0
+    }
+  },
+  "checks": [
+    {
+      "run": "LP full month (strategy A)",
+      "solver": "pyomo/appsi_highs",
+      "seconds": 11.26,
+      "total cost EUR": 9434.43,
+      "simultaneous charge+discharge intervals": 0
+    },
+    {
+      "run": "LP rolling daily (strategy A)",
+      "solver": "pyomo/appsi_highs (rolling daily)",
+      "seconds": 13.3,
+      "total cost EUR": 9435.44,
+      "simultaneous charge+discharge intervals": 0
+    },
+    {
+      "run": "SciPy cross-check (strategy A)",
+      "solver": "scipy/highs-lp",
+      "seconds": 0.74,
+      "total cost EUR": 9434.43,
+      "simultaneous charge+discharge intervals": 0
+    }
+  ],
+  "daily_throughput": {
+    "A_deterministic": {
+      "mean": 700.2,
+      "min": 609.2,
+      "max": 771.4
+    },
+    "B_conservative": {
+      "mean": 687.3,
+      "min": 550.2,
+      "max": 771.4
+    }
+  },
+  "stress": {
+    "no battery": {
+      "mean cost EUR": 9756.74,
+      "P90 cost EUR": 9784.54,
+      "mean saving vs no battery EUR": 0.0,
+      "scenarios that would export %": 0.0,
+      "mean energy that would be exported kWh": 0.0,
+      "scenarios above 600 kW %": 0.0
+    },
+    "A_deterministic": {
+      "mean cost EUR": 9463.07,
+      "P90 cost EUR": 9489.37,
+      "mean saving vs no battery EUR": 293.67,
+      "scenarios that would export %": 57.67,
+      "mean energy that would be exported kWh": 20.27,
+      "scenarios above 600 kW %": 0.0
+    },
+    "B_conservative": {
+      "mean cost EUR": 9466.25,
+      "P90 cost EUR": 9493.97,
+      "mean saving vs no battery EUR": 290.49,
+      "scenarios that would export %": 29.67,
+      "mean energy that would be exported kWh": 1.27,
+      "scenarios above 600 kW %": 0.0
+    }
+  },
+  "charge_price": 20.09517069416617,
+  "discharge_price": 79.82076701525071,
+  "binding": {
+    "A_deterministic": {
+      "SOC at lower bound": 842,
+      "SOC at 450 kWh": 845,
+      "charging at 100 kW": 434,
+      "discharging at 100 kW": 377,
+      "no-export limit binding": 74,
+      "grid limit binding": 0
+    },
+    "B_conservative": {
+      "SOC at lower bound": 839,
+      "SOC at 450 kWh": 851,
+      "charging at 100 kW": 426,
+      "discharging at 100 kW": 373,
+      "no-export limit binding": 82,
+      "grid limit binding": 0
+    }
+  },
+  "forecast_unavailable_days": [
+    "2025-12-06",
+    "2025-12-14",
+    "2025-12-21"
+  ]
+}

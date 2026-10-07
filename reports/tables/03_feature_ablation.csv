@@ -1,0 +1,5 @@
+feature set,n features,MAE NORMAL Nov,Bias NORMAL Nov,MAE NORMAL Jan,Bias NORMAL Jan,CV MAE NORMAL,holdout MAE NORMAL (mean)
+core,9,9.59,0.33,9.79,0.36,9.57,9.69
+core + cyclic,14,9.6,0.28,9.79,0.36,9.58,9.7
+core + temperature,10,9.61,0.73,9.9,0.05,9.64,9.75
+core + season,11,26.49,6.84,9.88,0.45,9.9,18.18
